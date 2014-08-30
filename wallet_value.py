@@ -5,8 +5,10 @@ import sys
 import requests
 import json
 
+app_id = "77e28cca29a347d9bf0abd8c1c3d7a6d"
+
 def eur_to_gbp(euros):
-  endpoint = "http://openexchangerates.org/api/latest.json?app_id=77e28cca29a347d9bf0abd8c1c3d7a6d"
+  endpoint = "http://openexchangerates.org/api/latest.json?app_id="+app_id
 
   req = requests.get(endpoint)
   data = json.loads(req.text)
